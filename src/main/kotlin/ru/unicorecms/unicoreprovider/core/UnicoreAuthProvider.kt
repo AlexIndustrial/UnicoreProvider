@@ -2,13 +2,15 @@ package ru.unicorecms.unicoreprovider.core
 
 import org.apache.logging.log4j.LogManager
 import org.apache.logging.log4j.Logger
-import pro.gravit.launcher.events.request.AuthRequestEvent
-import pro.gravit.launcher.events.request.GetAvailabilityAuthRequestEvent
-import pro.gravit.launcher.request.auth.AuthRequest
+import pro.gravit.launcher.base.request.auth.CheckServerRequest
+import pro.gravit.launcher.base.request.auth.JoinServerRequest
+//import pro.gravit.launcher.events.request.AuthRequestEvent
+//import pro.gravit.launcher.events.request.GetAvailabilityAuthRequestEvent
+//import pro.gravit.launcher.request.auth.AuthRequest
 import pro.gravit.launchserver.LaunchServer
 import pro.gravit.launchserver.auth.AuthException
 import pro.gravit.launchserver.auth.core.AuthCoreProvider
-import pro.gravit.launchserver.auth.core.HttpAuthCoreProvider.*
+//import pro.gravit.launchserver.auth.core.HttpAuthCoreProvider.*
 import pro.gravit.launchserver.auth.core.User
 import pro.gravit.launchserver.auth.core.UserSession
 import pro.gravit.launchserver.auth.core.interfaces.provider.AuthSupportExit
@@ -127,6 +129,16 @@ class UnicoreAuthProvider: AuthCoreProvider(), AuthSupportExit {
 
     override fun checkServer(client: Client, username: String, serverID: String): User {
         return requester.post(checkServerUrl, CheckServerRequest(username, serverID)).getOrThrow<HttpUser>()
+    }
+
+    override fun joinServer(
+        client: Client?,
+        username: String?,
+        uuid: UUID?,
+        accessToken: String?,
+        serverID: String?
+    ): Boolean {
+        TODO("Not yet implemented")
     }
 
     override fun joinServer(client: Client, username: String, accessToken: String, serverID: String): Boolean {

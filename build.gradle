@@ -1,11 +1,11 @@
 plugins {
-    id "com.github.johnrengelman.shadow" version "2.0.4"
-    id 'org.jetbrains.kotlin.jvm' version '1.6.10'
+    id "com.github.johnrengelman.shadow" version "8.1.1"
+    id 'org.jetbrains.kotlin.jvm' version '1.9.22'
 }
 
 def mainClassName = "ru.unicorecms.unicoreprovider.UnicoreProviderModule";
-sourceCompatibility = '17'
-targetCompatibility = '17'
+sourceCompatibility = '21'
+targetCompatibility = '21'
 
 group 'uno.unicore'
 version '1.0.1-STABLE'
@@ -21,9 +21,9 @@ dependencies {
     compileOnly 'com.google.code.gson:gson:2.9.0'
     compileOnly 'org.apache.logging.log4j:log4j-api:2.17.2'
     compileOnly 'org.apache.logging.log4j:log4j-core:2.17.2'
-    compileOnly 'pro.gravit.launcher:launcher-core:5.2.11'
-    compileOnly 'pro.gravit.launcher:launcher-ws-api:5.2.11'
-    compileOnly 'pro.gravit.launcher:launchserver-api:5.2.11'
+    compileOnly 'pro.gravit.launcher:launcher-core:5.6.9'
+    compileOnly 'pro.gravit.launcher:launcher-ws-api:5.6.9'
+    compileOnly 'pro.gravit.launcher:launchserver-api:5.6.9'
 }
 
 jar {
@@ -31,7 +31,7 @@ jar {
 }
 
 shadowJar {
-    archiveClassifier.set('')
+    archiveClassifier.set("")
 }
 
 artifacts {

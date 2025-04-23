@@ -1,9 +1,9 @@
 package ru.unicorecms.unicoreprovider
 
-import pro.gravit.launcher.modules.LauncherInitContext
-import pro.gravit.launcher.modules.LauncherModule
-import pro.gravit.launcher.modules.LauncherModuleInfo
-import pro.gravit.launcher.modules.events.PreConfigPhase
+import pro.gravit.launcher.base.modules.LauncherInitContext
+import pro.gravit.launcher.base.modules.LauncherModule
+import pro.gravit.launcher.base.modules.LauncherModuleInfo
+import pro.gravit.launcher.base.modules.events.PreConfigPhase
 import pro.gravit.launchserver.auth.core.AuthCoreProvider
 import pro.gravit.utils.Version
 import ru.unicorecms.unicoreprovider.core.UnicoreAuthProvider
